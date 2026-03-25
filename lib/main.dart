@@ -45,8 +45,9 @@ class _SignupPageState extends State<SignupPage> {
         padding: const EdgeInsets.all(16.0),
         child: Form( // 👶 Child
           key: _formKey,
+          child: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // NEW Welcome Message
               const Text(
@@ -62,9 +63,9 @@ class _SignupPageState extends State<SignupPage> {
               'Join us and start your account today 🚀',
               style: TextStyle(fontSize: 16, color: Colors.black54),
             ),
-
+        
             const SizedBox(height: 20),
-            
+
             // existing code
               const Text(
                 'Create Your Account',
@@ -149,12 +150,13 @@ class _SignupPageState extends State<SignupPage> {
                 child: const Text(
                   'Sign Up',
                   style: TextStyle(fontSize: 18),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
     );
   }
-}
+} 
