@@ -46,7 +46,26 @@ class _SignupPageState extends State<SignupPage> {
         child: Form( // 👶 Child
           key: _formKey,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // NEW Welcome Message
+              const Text(
+                'Welcome to the Signup App!',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,
+                color: Colors.purple,
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            const Text(
+              'Join us and start your account today 🚀',
+              style: TextStyle(fontSize: 16, color: Colors.black54),
+            ),
+
+            const SizedBox(height: 20),
+            
+            // existing code
               const Text(
                 'Create Your Account',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
