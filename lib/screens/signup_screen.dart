@@ -30,6 +30,7 @@ class _SignupScreenState extends State<SignupScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Form( // 👶 Child
           key: _formKey,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +90,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Please enter your email';
                     }
-                    if (!value.contains('@')) {
+                    // Update domain validation
+                    final emailRegex = RegExp(
+                    r'^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$',
+                    );
+                    if (!emailRegex.hasMatch(value)) {
                       return 'Please enter a valid email';
                     }
                     return null;
