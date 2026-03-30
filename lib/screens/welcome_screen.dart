@@ -13,6 +13,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Welcome'),
+        backgroundColor: Colors.purple,
       ),
       body: Center(
         child: Padding(
@@ -42,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
               // 📄 Subtitle
               const Text(
                 'Create your account and get started with our amazing features.',
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 16, color: Colors.black54),
                 textAlign: TextAlign.center,
               ),
 
@@ -59,6 +60,7 @@ class WelcomeScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.purple,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 30,
                     vertical: 12,
