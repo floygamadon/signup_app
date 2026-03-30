@@ -18,9 +18,9 @@ class SignupAdventureApp extends StatelessWidget {
       initialRoute: '/',
 
       routes: {
-        '/': (context) => const WelcomeScreen(),
-        '/signup': (context) => const SignupScreen(),
-        '/success': (context) => const SuccessScreen(),
+        '/': (context) => WelcomeScreen(),
+        '/signup': (context) => SignupScreen(),
+        '/success': (context) => SuccessScreen(),
       },
     );
   }
