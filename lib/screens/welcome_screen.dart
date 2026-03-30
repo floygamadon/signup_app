@@ -31,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
 
               // 📄 Subtitle
               const Text(
-                'Create your account and get started 🚀',
+                'Create your account and get started with our amazing features.',
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.center,
               ),
